@@ -1,0 +1,9 @@
+<% if flash[:message] %>
+<div class="notice"><%= flash[:message] %></div>
+<% end %>
+
+<%= form_for :session do |f| %>
+Username: <%= f.text_field :name %>
+Password: <%= f.password_field :password %>
+<%= f.submit "Submit" %>
+<% end %>
